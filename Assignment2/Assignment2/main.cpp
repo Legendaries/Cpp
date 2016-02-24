@@ -8,6 +8,9 @@
 
 using namespace std;
 
+/**
+ * Structure representing a person
+ */
 struct Person {
 	string fName = "Jim";
 	string lName = "Goudy";
@@ -15,12 +18,17 @@ struct Person {
 	double salary = numeric_limits<double>::max();
 };
 
+/**
+ * Calculates the standard deviation of an array.
+ * @param numArray[] The array of numbers to calculate the standard deviation of.
+ * @param size The size of the array.
+ * @return The standard deviation of the array.
+ */
 template <typename T>
 T stddev(T numArray[], int size) {
 	T mean = 0; // Calculates mean
 	for (int i = 0; i < size; i++)
 		mean += numArray[i];
-
 	mean /= size;
 
 	T result = 0;
@@ -30,6 +38,9 @@ T stddev(T numArray[], int size) {
 	return sqrt(result / double(size));
 }
 
+/**
+ * The menu for standard deviation.
+ */
 void stdDevMenu() {	
 	double numArray[10000];
 	int size = 0;
@@ -47,6 +58,11 @@ void stdDevMenu() {
 	cout << "Standard Deviation: " << stddev<double>(numArray, size) << endl;
 }
 
+/**
+ * Concatenates a vector of strings into one string
+ * @param words The vector of strings.
+ * @return The concatenated string of all the strings in the vector.
+ */
 string getConcatenatedString(vector<string> &words) {
 	string out = "";
 	for (const auto &word : words)
@@ -54,10 +70,18 @@ string getConcatenatedString(vector<string> &words) {
 	return out;
 }
 
+/**
+ * Finds the number of characters in a vector of strings
+ * @param words The vector of strings.
+ * @return The number of characters in all the strings in the vector.
+ */
 int getCharCount(vector<string> &words) {
 	return getConcatenatedString(words).length();
 }
 
+/**
+ * The menu for counting characters.
+ */
 void countCharsMenu() {
 	vector<string> words;
 
@@ -75,6 +99,9 @@ void countCharsMenu() {
 	cout << "There are " << getCharCount(words) << " characters in \"" << getConcatenatedString(words) << "\"" << endl;
 }
 
+/**
+ * The menu for using the Person structure.
+ */
 void personMenu() {
 	vector<Person> people;
 
@@ -111,6 +138,9 @@ void personMenu() {
 	cout << "Average Salary : " << totalSalary / people.size() << endl;
 }
 
+/**
+ * Pauses the program
+ */
 void pause() {
 	int x = 0;
 	cin >> x;
@@ -118,7 +148,6 @@ void pause() {
 
 int main() {
 	int input = 0;
-
 	while (input != -1) {
 		cout << "Enter:\n\t1.Standard Deviation\n\t2. Calculate number of characters of words\n\t3. Deal with people\n\t-1. Quit" << endl;
 		cin >> input;
