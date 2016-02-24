@@ -77,7 +77,6 @@ void overloadMenupt2(){
 void asciiMenu(){
     int chara = 64;
     
-    //lazy way
     int i = 1;
     
     while(chara != 122){
