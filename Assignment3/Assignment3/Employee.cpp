@@ -1,20 +1,16 @@
 #include "Employee.h"
 
-Employee::Employee(std::string fName, std::string lName, int id, std::string department, std::string position)
-{
+Employee::Employee() {}
+
+Employee::~Employee() {
+
 }
 
-Employee::~Employee()
-{
-}
-
-void Employee::setID(int id)
-{
+void Employee::setID(int id) {
 	this->id = id;
 }
 
-int Employee::getID()
-{
+int Employee::getID() {
 	return this->id;
 }
 
@@ -45,6 +41,7 @@ std::string Employee::getPosition() {
 void Employee::setPosition(std::string position) {
 	this->position = position;
 }
+
 std::string Employee::getDepartment() {
 	return this->department;
 }
