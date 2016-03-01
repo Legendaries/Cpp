@@ -18,3 +18,8 @@ void Car::brake() {
 	else
 		speed = 0;
 }
+
+std::ostream &operator<<(std::ostream &os, const Car &c) {
+	os << "Car:\t{ Make: " << c.make << " Model: " << c.model << " Speed: " << c.speed << " }";
+	return os;
+}

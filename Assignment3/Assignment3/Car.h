@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 
 class Car {
 public:
@@ -13,5 +14,5 @@ private:
 public:
 	void accelerate();
 	void brake();
+	friend std::ostream& operator<<(std::ostream& os, const Car& c);
 };
-

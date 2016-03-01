@@ -1,5 +1,5 @@
 #include <string>
-
+#include <iostream>
 #pragma once
 
 class Employee {
@@ -19,4 +19,5 @@ public:
 	std::string getDepartment();
 	void setPosition(std::string position);
 	std::string getPosition();
+	friend std::ostream& operator<<(std::ostream& os, const Employee& e);
 };

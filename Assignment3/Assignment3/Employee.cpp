@@ -46,3 +46,7 @@ std::string Employee::getDepartment() {
 	return this->department;
 }
 
+std::ostream& operator<<(std::ostream& os, const Employee& e) {
+	os << e.position << " " << e.fName << " " << e.lName << " in " << e.department << " with id: " << e.id;
+	return os;
+}

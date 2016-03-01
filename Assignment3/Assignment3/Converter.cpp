@@ -9,5 +9,5 @@ double ftToIn(double ft) {
 }
 
 double fahrenheitToCelcius(double fahrenheit) {
-	return (fahrenheit - 32)*(5 / 9);
+	return (fahrenheit - 32)*(5.0 / 9.0);
 }

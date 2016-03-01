@@ -1,9 +1,4 @@
 ﻿  main.cpp
-c:\users\daniel\documents\github\cpp\assignment3\assignment3\main.cpp(12): warning C4930: 'std::vector<Employee,std::allocator<_Ty>> employees(void)': prototyped function not called (was a variable definition intended?)
-          with
-          [
-              _Ty=Employee
-          ]
-c:\users\daniel\documents\github\cpp\assignment3\assignment3\main.cpp(15): warning C4930: 'Employee temp(void)': prototyped function not called (was a variable definition intended?)
-  Assignment3.vcxproj -> C:\Users\Daniel\Documents\GitHub\Cpp\Assignment3\Debug\Assignment3.exe
-  Assignment3.vcxproj -> C:\Users\Daniel\Documents\GitHub\Cpp\Assignment3\Debug\Assignment3.pdb (Partial PDB)
+t:\daniellchurch.fvcc\documents\github\new folder (2)\cpp\assignment3\assignment3\main.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Assignment3.vcxproj -> T:\daniellchurch.FVCC\Documents\GitHub\New folder (2)\Cpp\Assignment3\Debug\Assignment3.exe
+  Assignment3.vcxproj -> T:\daniellchurch.FVCC\Documents\GitHub\New folder (2)\Cpp\Assignment3\Debug\Assignment3.pdb (Partial PDB)
