@@ -1,0 +1,69 @@
+%----------------------------------------------------------------------------------------
+%	SECTION A:  Document declaration and packages used for Latex Compile
+%----------------------------------------------------------------------------------------
+\documentclass{article}
+%\documentclass[titlepage]{article}
+
+\usepackage{graphicx} 						% Required for the inclusion of images
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ...
+\usepackage{amssymb,amsmath}		% Math packages
+\usepackage{epstopdf}							% encapsulated postscript to pdf
+\usepackage{color}	
+\usepackage{setspace}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+%----------------------------------------------------------------------------------------
+%	SECTION B:  New commands defined for use in this document, examples given, you may change
+%----------------------------------------------------------------------------------------
+\newcommand{\blu}[1]{\textcolor{blue}{#1}}                     			% \blu{} will make your font blue
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\definecolor{light-gray}{gray}{0.8}
+\definecolor{orange}{rgb}{1,0.5,0}
+\newcommand{\gray}[1]{\textcolor{light-gray}{#1}}
+
+%----------------------------------------------------------------------------------------
+%	SECTION C:  Lab Title
+%----------------------------------------------------------------------------------------
+\title{FVCC Linear Algebra\\ Proof of The Distributive Property of Matrix Multiplication Over Addition \\ } 		% Title
+\author{Daniel Church} 													% Author name
+\date{\today} 	
+
+\begin{document}
+\maketitle
+\noindent
+% Lab Participants
+\rule[4mm]{17cm}{2pt}
+\begin{tabular}{l r}
+Date Performed: & \today \\
+Instructor: & M. Severino																% Instructor
+\end{tabular}\\
+\rule[4mm]{17cm}{2pt}
+\AtBeginEnvironment{tabular}{\doublespacing}
+%----------------------------------------------------------------------------------------
+%	SECTION 1:  Description of what you intend to do in this lab
+%----------------------------------------------------------------------------------------
+\newpage
+{\centering
+\LARGE Proof of The Distributive Property of Matrix Multiplication Over Addition \par
+}
+\doublespacing
+\begin{tabular}{@{}l l l @{\hskip 2.5in}l}
+To Show: $A(B+C)$ & = & $AB + AC$ & 
+\end{tabular}
+
+Given $A, B$ and $C$ are Matrices of size $m$ x $n$, $n$ x $p$, and $n$ x $p$ respectively,
+
+\begin{tabular}{@{}l l l @{\hskip 2in}l}
+Let $D$ & = & $A+B$ & By Addition of Matrices\\
+Then, $A(B+C)$ & = & $AD$ & By Substituion\\
+$(AD)_{ij}$ & = & $\displaystyle\sum_{k=1}^{n} a_{ik}d_{kj}$ & By Def. of Matrix Multiplication\\%may remove the display style
+$(AD)_{ij}$ & = & $\displaystyle\sum_{k=1}^{n} a_{ik}(b_{kj}+c_{kj})$ & By Substituion\\%may remove the display style
+$(AD)_{ij}$ & = & $\displaystyle\sum_{k=1}^{n} a_{ik}b_{kj}+a_{ik}c_{kj}$ & By The Distrubutive Property\\%may remove the display style
+& = & $\displaystyle\sum_{k=1}^{n} a_{ik}b_{kj} + \displaystyle\sum_{k=1}^{n} a_{ik}c_{kj}$ & \\
+& = & $(AB)_{ij}+(AC)_{ij}$ & By Def. of Matrix Multiplication\\
+& = & $(AB+AC)_{ij}$ & \\
+\end{tabular}\\
+
+$\therefore A(B+C) = AB + AC$
+\end{document} 
